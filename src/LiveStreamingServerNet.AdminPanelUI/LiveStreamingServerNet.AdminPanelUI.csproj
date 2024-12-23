@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net7.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+    <Authors>Joseph NH Tam</Authors>
+    <Description>This package provides the Admin Panel UI for LiveStreamingServer.NET.</Description>
+    <PackageTags>live-streaming;rtmp;flv;http-flv</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <Version>0.13.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="../../admin-panel-ui/dist/**" LinkBase="admin-panel-ui">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <PackageFlatten>false</PackageFlatten>
+      <Pack>true</Pack>
+      <PackagePath>contentFiles/any/any/admin-panel-ui</PackagePath>
+    </Content>
+  </ItemGroup>
+
+</Project>

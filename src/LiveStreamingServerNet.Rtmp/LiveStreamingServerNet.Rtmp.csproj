@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net7.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+    <Authors>Joseph NH Tam</Authors>
+    <Description>This package implements the RTMP protocol.</Description>
+    <PackageTags>live-streaming;rtmp;flv</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <Version>0.13.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mediator.Abstractions" Version="3.0.0-preview.27" />
+    <PackageReference Include="Mediator.SourceGenerator" Version="3.0.0-preview.27">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="mtanksl.ActionMessageFormat" Version="1.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
+    <InternalsVisibleTo Include="LiveStreamingServerNet.Rtmp.Test" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LiveStreamingServerNet.Networking\LiveStreamingServerNet.Networking.csproj" />
+  </ItemGroup>
+
+</Project>
